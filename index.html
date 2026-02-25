@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronForge Advisors | Manufacturing Profit Recovery for Colorado Fabrication Shops</title>
+  <meta name="description" content="IronForge Advisors finds hidden profit in Colorado fabrication shops. A 4-6 week, fixed-fee audit that shows you where the money is going and what to do about it. Book a discovery call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "IronForge Advisors",
+    "description": "Manufacturing Profit Recovery audits for Colorado fabrication shops. A 4-6 week, fixed-fee engagement that finds hidden margin leaks and gives you a plan to fix them.",
+    "url": "https://jimcoleman1982.github.io/ironforge-advisors/",
+    "email": "stu@ironforgeadvisors.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Stu Jensen",
+      "jobTitle": "Founder & Manufacturing Advisor"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Colorado"
+    },
+    "serviceType": ["Manufacturing Consulting", "Operations Advisory", "Profit Recovery Audit"]
+  }
+  </script>
+  <style>
+    /* ========================================
+       CSS RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: #1A7A6D;
+      color: #FAFAF7;
+    }
+
+    :root {
+      --bg-primary: #FAFAF7;
+      --bg-alt: #F2F0EB;
+      --bg-card: #FFFFFF;
+      --text-primary: #1A1A1A;
+      --text-secondary: #5C5C5C;
+      --text-tertiary: #8A8A8A;
+      --accent-teal: #1A7A6D;
+      --accent-teal-light: #E8F5F2;
+      --accent-teal-dark: #145F55;
+      --accent-cta: #E8613A;
+      --accent-cta-hover: #D4522D;
+      --accent-cta-light: #FFF0EB;
+      --border-light: #E5E3DE;
+      --border-medium: #D1CFC8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,26,26,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,26,0.08);
+      --shadow-lg: 0 8px 32px rgba(26,26,26,0.10);
+      --max-width: 1140px;
+      --section-py: 100px;
+      --section-py-mobile: 64px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--bg-primary);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--accent-teal);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-teal-dark);
+    }
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ========================================
+       LAYOUT
+       ======================================== */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--narrow {
+      max-width: 800px;
+    }
+
+    section {
+      padding: var(--section-py) 0;
+    }
+
+    /* ========================================
+       BUTTONS
+       ======================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 42px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn--primary {
+      background-color: var(--accent-cta);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(232, 97, 58, 0.25);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--accent-cta-hover);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(232, 97, 58, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn--nav {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    .nav__links .btn--primary {
+      color: #FFFFFF;
+    }
+
+    .nav__links .btn--primary:hover {
+      color: #FFFFFF;
+    }
+
+    /* ========================================
+       STICKY NAV
+       ======================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav__logo span {
+      color: var(--accent-teal);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--text-primary);
+      margin: 6px 0;
+      transition: all 0.3s ease;
+    }
+
+    /* ========================================
+       HERO
+       ======================================== */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: var(--section-py);
+      background-color: var(--bg-primary);
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 600px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+    }
+
+    .hero__prehead {
+      display: inline-block;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .hero__headline {
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .hero__deck {
+      max-width: 620px;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    .hero__cta-group {
+      margin-bottom: 12px;
+    }
+
+    .hero__subtext {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+    }
+
+    /* ========================================
+       PROBLEM
+       ======================================== */
+    .problem {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .problem__content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .problem__content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 1.5em;
+      color: var(--text-primary);
+    }
+
+    .problem__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .problem__content .problem__pullquote {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text-primary);
+      display: block;
+      margin: 2em 0;
+      padding: 24px 0 24px 32px;
+      border-left: 4px solid var(--accent-teal);
+    }
+
+    .problem__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 720px;
+      margin: 48px auto 0;
+    }
+
+    .problem__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .problem__card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .problem__card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background-color: var(--accent-cta-light);
+      color: var(--accent-cta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.125rem;
+    }
+
+    .problem__card p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* ========================================
+       SOLUTION / THE AUDIT
+       ======================================== */
+    .solution {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .solution__intro {
+      max-width: 720px;
+      margin-bottom: 64px;
+    }
+
+    .solution__intro h2 {
+      margin-bottom: 28px;
+    }
+
+    .solution__intro p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .solution__label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+
+    .solution__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .solution__card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .solution__card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .solution__card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+    }
+
+    .solution__card-icon--examine {
+      background-color: var(--accent-teal-light);
+      color: var(--accent-teal);
+    }
+
+    .solution__card-icon--deliver {
+      background-color: #FFF5E6;
+      color: #D4900A;
+    }
+
+    .solution__card-icon--different {
+      background-color: var(--accent-cta-light);
+      color: var(--accent-cta);
+    }
+
+    .solution__card h3 {
+      margin-bottom: 14px;
+    }
+
+    .solution__card p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .solution__card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+
+    .solution__card ul li {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .solution__card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 8px;
+      height: 2px;
+      background-color: var(--accent-teal);
+    }
+
+    /* ========================================
+       HOW IT WORKS
+       ======================================== */
+    .how-it-works {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .how-it-works__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+
+    .how-it-works__header h2 {
+      margin-bottom: 0;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .step {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .step:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .step__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ========================================
+       WHO THIS IS FOR
+       ======================================== */
+    .who-we-serve {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .who-we-serve__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+
+    .who-we-serve__header h2 {
+      margin-bottom: 16px;
+    }
+
+    .who-we-serve__header p {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+    }
+
+    .who-we-serve__label {
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+    }
+
+    .tiers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .tier {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .tier:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .tier__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      background-color: var(--accent-teal-light);
+      color: var(--accent-teal);
+    }
+
+    .tier h3 {
+      margin-bottom: 10px;
+    }
+
+    .tier__desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .tier ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tier ul li {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .tier ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 2px;
+      background-color: var(--accent-teal);
+    }
+
+    .who-we-serve__colorado {
+      text-align: center;
+      max-width: 600px;
+      margin: 48px auto 0;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .who-we-serve__colorado p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .who-we-serve__colorado strong {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       ABOUT STU
+       ======================================== */
+    .about {
+      background-color: var(--bg-alt);
+      padding: var(--section-py) 0;
+    }
+
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about__photo {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .about__content h2 {
+      margin-bottom: 24px;
+    }
+
+    .about__content p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .about__content p strong {
+      color: var(--text-primary);
+    }
+
+    .about__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 36px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .about__stat-number {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--accent-teal);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .about__stat-label {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+    }
+
+    /* ========================================
+       FAQ
+       ======================================== */
+    .faq {
+      background-color: var(--bg-primary);
+      padding: var(--section-py) 0;
+    }
+
+    .faq__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .faq__header h2 {
+      margin-bottom: 0;
+    }
+
+    .faq__list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .faq__item {
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq__question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      gap: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: color 0.2s ease;
+    }
+
+    .faq__question:hover {
+      color: var(--accent-teal);
+    }
+
+    .faq__icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      color: var(--text-secondary);
+    }
+
+    .faq__icon svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq__item.active .faq__icon {
+      background-color: var(--accent-teal);
+      border-color: var(--accent-teal);
+      color: #FFFFFF;
+    }
+
+    .faq__item.active .faq__icon svg {
+      transform: rotate(45deg);
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq__answer-inner {
+      padding-bottom: 24px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .faq__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ========================================
+       FINAL CTA
+       ======================================== */
+    .final-cta {
+      background-color: var(--accent-teal);
+      color: #FFFFFF;
+      padding: var(--section-py) 0;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto 1em;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+    }
+
+    .final-cta__steps {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px auto 36px;
+      max-width: 640px;
+      flex-wrap: wrap;
+    }
+
+    .final-cta__step {
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .final-cta__step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .final-cta__step p {
+      font-size: 0.875rem;
+      opacity: 0.85;
+      margin: 0;
+    }
+
+    .final-cta .btn--primary {
+      background-color: #FFFFFF;
+      color: var(--accent-teal);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .final-cta .btn--primary:hover {
+      background-color: var(--bg-alt);
+      color: var(--accent-teal-dark);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .final-cta__subtext {
+      font-size: 0.875rem;
+      opacity: 0.7;
+      margin-top: 20px;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    .footer {
+      background-color: var(--bg-primary);
+      border-top: 1px solid var(--border-light);
+      padding: 40px 0;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer__logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+    }
+
+    .footer__logo span {
+      color: var(--accent-teal);
+    }
+
+    .footer__copy {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer__links li a {
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer__links li a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-delay-1 { transition-delay: 0.1s; }
+      .fade-in-delay-2 { transition-delay: 0.2s; }
+      .fade-in-delay-3 { transition-delay: 0.3s; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    @media (min-width: 768px) {
+      .solution__cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .tiers {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .problem__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about__inner {
+        grid-template-columns: 280px 1fr;
+      }
+
+      .about__photo {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+      :root {
+        --section-py: var(--section-py-mobile);
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+
+      .nav__links {
+        display: none;
+      }
+
+      .nav__toggle {
+        display: block;
+      }
+
+      .nav__links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 72px);
+        background-color: var(--bg-primary);
+        padding: 32px 24px;
+        gap: 24px;
+        z-index: 999;
+      }
+
+      .nav__links.open a {
+        font-size: 1.25rem;
+      }
+
+      .nav__links.open .btn--nav {
+        padding: 16px 32px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .final-cta__steps {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       NAV
+       ======================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Iron<span>Forge</span></a>
+      <ul class="nav__links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#who-we-serve">Who We Serve</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#" class="btn btn--primary btn--nav">Book a Discovery Call</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       HERO
+       ======================================== -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero__prehead fade-in">Manufacturing Profit Recovery</p>
+      <h1 class="hero__headline fade-in fade-in-delay-1">Your shop is busy. Your margins should prove it.</h1>
+      <p class="hero__deck fade-in fade-in-delay-2">Most fabrication shops are losing 5-15% of revenue to margin leaks they can't see. IronForge finds them, measures them in dollars, and gives you a plan to fix them.</p>
+      <div class="hero__cta-group fade-in fade-in-delay-2">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+      </div>
+      <p class="hero__subtext fade-in fade-in-delay-2">30 minutes. No commitment.</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PROBLEM
+       ======================================== -->
+  <section class="problem">
+    <div class="container">
+      <div class="problem__content fade-in">
+        <p>You're not imagining it.</p>
+        <p>The shop is busier than it's been in years. More jobs on the floor. More hours logged. More trucks leaving the dock. But when you sit down with the financials at the end of the month, the margin isn't there. Revenue is up, but the money that should be hitting the bottom line keeps disappearing somewhere between the quote and the invoice.</p>
+        <p class="problem__pullquote">The work is getting done. The money just isn't following.</p>
+      </div>
+      <div class="problem__cards">
+        <div class="problem__card fade-in">
+          <div class="problem__card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v16M2 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <p>You're quoting jobs the same way you always have, but material costs and labor rates have changed. Some jobs are profitable. Others are quietly eating your margin.</p>
+        </div>
+        <div class="problem__card fade-in fade-in-delay-1">
+          <div class="problem__card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/><path d="M10 7v4l2.5 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <p>Overtime has become the default, not the exception. But nobody can tell you exactly what it's costing per month or whether it's actually solving the production gap.</p>
+        </div>
+        <div class="problem__card fade-in">
+          <div class="problem__card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4m0 0l4-4m-4 4l4 4m-4-4L3 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p>You know there's scrap and rework, but nobody is tracking it consistently. The waste is real, but invisible in the books.</p>
+        </div>
+        <div class="problem__card fade-in fade-in-delay-1">
+          <div class="problem__card-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 10h6M10 7v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <p>Scheduling feels reactive. Jobs stack up at the same machine, and when one slips, the whole floor ripples.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SOLUTION / THE AUDIT
+       ======================================== -->
+  <section class="solution">
+    <div class="container">
+      <div class="solution__intro fade-in">
+        <h2>The Manufacturing Profit Recovery audit</h2>
+        <p>A 4-6 week, fixed-fee engagement where Stu Jensen comes to your shop, reviews your operation and your financials, and identifies every place you're losing margin. You get a detailed report showing where the money is going, in dollars, and a prioritized action plan for getting it back.</p>
+      </div>
+      <p class="solution__label fade-in">What you get</p>
+      <div class="solution__cards">
+        <div class="solution__card fade-in">
+          <div class="solution__card-icon solution__card-icon--examine">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="M14 14l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>A complete financial diagnosis</h3>
+          <p>Every margin leak identified and measured in dollars, not percentages. Job costing accuracy, quoting practices, scheduling gaps, overtime patterns, scrap rates, labor utilization, and inventory management.</p>
+        </div>
+        <div class="solution__card fade-in fade-in-delay-1">
+          <div class="solution__card-icon solution__card-icon--deliver">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 12l5 5L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Root causes, not symptoms</h3>
+          <p>Overtime isn't the problem. It's a symptom of something upstream. The audit traces each leak to its source so the fix actually sticks. You'll see why the money is leaving, not just where.</p>
+        </div>
+        <div class="solution__card fade-in fade-in-delay-2">
+          <div class="solution__card-icon solution__card-icon--different">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>A prioritized action plan</h3>
+          <p>Fixes ranked by financial impact. The biggest dollars-recovered-per-effort items go first. Most shop owners recover the cost of the audit within the first year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       HOW IT WORKS
+       ======================================== -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="how-it-works__header fade-in">
+        <h2>How the audit works</h2>
+      </div>
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step__number">1</div>
+          <h3>Stu comes to your shop</h3>
+          <p>He works on your floor and in your books, not from a conference room. He works around your production schedule. No all-hands meetings. No workshops. No pulling your people off the line.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-1">
+          <div class="step__number">2</div>
+          <h3>He finds the leaks</h3>
+          <p>Job costing, quoting, scheduling, overtime, scrap, labor utilization, and inventory management. Anything that affects your margin gets examined. He traces each leak to its root cause and measures it in real dollars.</p>
+        </div>
+        <div class="step fade-in fade-in-delay-2">
+          <div class="step__number">3</div>
+          <h3>You get the plan</h3>
+          <p>A detailed report showing where the money is going, why it's happening, and what to fix first. The report is yours. You can execute the fixes yourself, or bring Stu back to help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       WHO THIS IS FOR
+       ======================================== -->
+  <section id="who-we-serve" class="who-we-serve">
+    <div class="container">
+      <div class="who-we-serve__header fade-in">
+        <h2>Who this is for</h2>
+        <p>IronForge works exclusively with fabrication-based manufacturers in Colorado. Owner-operated shops, typically 5-100 employees, $1M-$20M in revenue.</p>
+      </div>
+      <p class="who-we-serve__label fade-in">Industries served</p>
+      <div class="tiers">
+        <div class="tier fade-in">
+          <div class="tier__icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="10" width="16" height="9" rx="1" stroke="currentColor" stroke-width="2"/><path d="M7 10V6a4 4 0 018 0v4" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Metal fabrication and sheet metal</h3>
+          <p class="tier__desc">Shops running brakes, shears, lasers, and press work. High-mix production where quoting accuracy and throughput make or break your margin.</p>
+          <ul>
+            <li>Structural and architectural fabrication</li>
+            <li>Industrial and commercial metalwork</li>
+            <li>Construction-related fabrication</li>
+          </ul>
+        </div>
+        <div class="tier fade-in fade-in-delay-1">
+          <div class="tier__icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>CNC machining and welding</h3>
+          <p class="tier__desc">Precision operations where machine utilization, setup times, and skilled labor availability determine whether you're making money or just making parts.</p>
+          <ul>
+            <li>Aerospace and defense subcontractors</li>
+            <li>Oil and gas fabrication</li>
+            <li>Precision machining and turning</li>
+          </ul>
+        </div>
+        <div class="tier fade-in fade-in-delay-2">
+          <div class="tier__icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4h14v14H4z" stroke="currentColor" stroke-width="2"/><path d="M4 11h14M11 4v14" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Contract and custom manufacturing</h3>
+          <p class="tier__desc">Job shops handling custom work where every job has a different scope. Scheduling, labor allocation, and cost tracking get harder with every new project on the board.</p>
+          <ul>
+            <li>High-mix, low-volume production</li>
+            <li>Specialty and custom orders</li>
+            <li>Multi-process fabrication</li>
+          </ul>
+        </div>
+      </div>
+      <div class="who-we-serve__colorado fade-in">
+        <p><strong>Colorado only.</strong> Stu has spent his career in Colorado manufacturing. He knows the labor pool, the supply chains, the seasonal patterns, and the specific challenges that come with operating here. Working exclusively in Colorado means he already knows your market before he walks in the door.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ABOUT STU
+       ======================================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about__inner">
+        <img src="images/stu-jensen.jpg" alt="Stu Jensen, founder of IronForge Advisors" class="about__photo fade-in" width="280" height="373" loading="lazy">
+        <div class="about__content">
+          <h2 class="fade-in">Operator first. Advisor second.</h2>
+          <div class="fade-in fade-in-delay-1">
+            <p><strong>Stu Jensen didn't start in consulting. He started on the shop floor as a machine operator.</strong></p>
+            <p>He came up through the trades, learning by doing, one shift at a time. Machine operator to lead operator. Lead operator to production supervisor. Supervisor to plant manager. Plant Manager to General Manager of Sales and Operations.</p>
+            <p>Over 25 years, Stu led fabrication operations from 10 to 40+ employees. Quoting. Scheduling. Purchasing. Quality. Delivery. Hiring. Firing. And staring at financial statements at 10 PM wondering where the margin went.</p>
+            <p>He figured it all out eventually. But he figured it out the hard way. IronForge Advisors exists so you don't have to.</p>
+          </div>
+          <div class="about__stats fade-in fade-in-delay-2">
+            <div>
+              <div class="about__stat-number">40+</div>
+              <div class="about__stat-label">years in manufacturing</div>
+            </div>
+            <div>
+              <div class="about__stat-number">25</div>
+              <div class="about__stat-label">years leading operations</div>
+            </div>
+            <div>
+              <div class="about__stat-number">10-40+</div>
+              <div class="about__stat-label">employees managed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FAQ
+       ======================================== -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="faq__header fade-in">
+        <h2>Straight answers. No consulting jargon.</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item active">
+          <button class="faq__question" aria-expanded="true">
+            What is a Manufacturing Profit Recovery audit?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="false">
+            <div class="faq__answer-inner">It's a 4-6 week, fixed-fee engagement where Stu comes to your shop, reviews your operation and your financials, and identifies every place you're losing margin. You get a detailed report showing where the money is going, in dollars, and a prioritized action plan for getting it back.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            How long does it take?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Four to six weeks from start to final report. The timeline depends on the size and complexity of your operation, but it's scoped upfront so you'll know the schedule before we start.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Will this disrupt our production?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">No. Stu works around your production schedule. He's on your floor and in your books, not pulling people into meetings or running workshops. Your team keeps doing their jobs. The audit happens alongside normal operations.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            How much does the audit cost?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">It's a fixed fee quoted before the engagement starts. The fee depends on the size and complexity of your operation. There are no hourly charges, no scope creep, and no surprise invoices. You'll know the total cost upfront.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What kind of ROI can I expect?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Most shop owners recover the cost of the audit within the first year. The specific return depends on the size of your operation and which fixes you implement. Stu will walk through realistic expectations during the discovery call.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            What kind of manufacturers do you work with?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Fabrication-based operations in Colorado: metal fabrication, sheet metal, CNC machining, welding, contract manufacturing. Typically 5 to 100 employees, $1M to $20M in revenue, owner-operated.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            We've hired consultants before and it didn't work. Why would this be different?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">That's the most common thing Stu hears. And usually, the story is the same: someone came in with a methodology, produced a report, and left. Nothing changed. IronForge is different because Stu starts with your financials, not a framework. The deliverable shows specific dollar amounts, not theory. And if you want help implementing the fixes, he's there to do it. On the floor, not from a conference room.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Is this Lean consulting?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">No. This isn't Lean certification, Six Sigma training, or 5S workshops. The Profit Recovery audit is financial-first. It starts with where you're losing money and works backward to the operational causes. Lean and Six Sigma are tools, not the destination. If one of them is the right fix for a specific problem, we'll use it. But we're not selling a methodology.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Do we have to hire you to implement the recommendations?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">No. The audit report is yours. It's built so you or your team can execute the fixes yourselves. If you want Stu's help with implementation, that's available as a separate engagement. But there's no obligation and no pressure.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            Why fixed fee instead of hourly?
+            <span class="faq__icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg>
+            </span>
+          </button>
+          <div class="faq__answer" aria-hidden="true">
+            <div class="faq__answer-inner">Hourly billing rewards slow work. A consultant who bills by the hour has no incentive to be efficient. A fixed fee means the scope is clear, the timeline is set, and Stu is motivated to deliver results, not rack up hours.</div>
+          </div>
+        </div>
+      </div>
+      <div class="faq__cta fade-in">
+        <a href="#" class="btn btn--primary">Book a Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FINAL CTA
+       ======================================== -->
+  <section class="final-cta">
+    <div class="container">
+      <h2 class="fade-in">You've read this far for a reason.</h2>
+      <p class="fade-in fade-in-delay-1">Something about the numbers coming off your shop floor isn't adding up. Revenue is there. Effort is there. But the margin keeps slipping through cracks you can't quite find.</p>
+      <p class="fade-in fade-in-delay-1">That's exactly what the discovery call is for. Thirty minutes to talk through your operation, where you think the leaks are, and whether a Profit Recovery audit makes sense for your shop.</p>
+      <p class="fade-in fade-in-delay-1">If it's not the right fit, Stu will tell you that too.</p>
+      <div class="final-cta__steps fade-in fade-in-delay-1">
+        <div class="final-cta__step">
+          <div class="final-cta__step-num">1</div>
+          <p>Pick a time that works</p>
+        </div>
+        <div class="final-cta__step">
+          <div class="final-cta__step-num">2</div>
+          <p>30-min call with Stu</p>
+        </div>
+        <div class="final-cta__step">
+          <div class="final-cta__step-num">3</div>
+          <p>Get your audit plan</p>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-2">
+        <a href="#" class="btn btn--primary">Book My Discovery Call</a>
+      </div>
+      <p class="final-cta__subtext fade-in fade-in-delay-2">Fixed fee, quoted upfront. Colorado fabrication shops only.</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__logo">Iron<span>Forge</span></p>
+        <p class="footer__copy">&copy; 2026 IronForge Advisors. All rights reserved. &middot; <a href="mailto:stu@ironforgeadvisors.com">stu@ironforgeadvisors.com</a></p>
+        <ul class="footer__links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JS
+       ======================================== -->
+  <script>
+    // Mobile nav toggle
+    var navToggle = document.querySelector('.nav__toggle');
+    var navLinks = document.querySelector('.nav__links');
+
+    navToggle.addEventListener('click', function() {
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Nav shadow on scroll
+    var nav = document.querySelector('.nav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Initialize first FAQ item as open
+    var firstFaqItem = document.querySelector('.faq__item.active');
+    if (firstFaqItem) {
+      var firstAnswer = firstFaqItem.querySelector('.faq__answer');
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq__question').forEach(function(button) {
+      button.addEventListener('click', function() {
+        var item = button.parentElement;
+        var answer = item.querySelector('.faq__answer');
+        var isActive = item.classList.contains('active');
+
+        // Close all others
+        document.querySelectorAll('.faq__item.active').forEach(function(openItem) {
+          if (openItem !== item) {
+            openItem.classList.remove('active');
+            openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq__answer').style.maxHeight = null;
+            openItem.querySelector('.faq__answer').setAttribute('aria-hidden', 'true');
+          }
+        });
+
+        // Toggle current
+        item.classList.toggle('active');
+        button.setAttribute('aria-expanded', !isActive);
+        answer.setAttribute('aria-hidden', isActive);
+
+        if (!isActive) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = null;
+        }
+      });
+    });
+
+    // Scroll-triggered fade-in animations
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>
